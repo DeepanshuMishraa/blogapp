@@ -1,23 +1,57 @@
-{% extends "base.html" %} {% block title %}About{% endblock %} {% block content
-    %}
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>About Us</title>
-      <!-- Tailwind CSS CDN -->
-      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+{% extends "base.html" %} {% block title %}About{% endblock %} 
+
+{% block content %}
+
+<!doctype html>
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}" />
+      <script src="{{ url_for('static', filename='about.js') }}"></script>
+      
+      <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&family=Creepster&family=La+Belle+Aurore&family=MedievalSharp&family=Orbitron&family=Rye&display=swap" rel="stylesheet">
     </head>
     <body>
-      <div class="container mx-auto py-8">
-        <h1 class="text-3xl font-bold mb-4">About Us</h1>
-        <p class="text-lg mb-8">Welcome to my personal blog! My name is Deepanshu, and I'm a student. I created this blog as a platform to share my thoughts, experiences, and insights with the world. </p>
-        <p class="text-lg mb-8">My goal is to create a community of like-minded individuals who share a passion for [Blog Topic]. So feel free to explore my blog, leave a comment, and connect with me on social media. I'm excited to share my journey with you!"</p>
-        <img src="image.jpg" alt="Photograph" class="w-full">
-      </div>
+        <img src="{{ url_for('static', filename='mine.jpg') }}" width="30%">
+        <h1>Hi,My Name is Deepanshu</h1>
+        <h2>Fun Facts About Me: </h2>
+        <ul>
+            <li>18 Years Old</li>
+            <li>Lives In India</li>
+            <li>Coding Enthusiast</li>
+            <li>Loves Watching Movies</li>
+        </ul>
+        
+        <p>Please Connect With Me on</p><a href="https://twitter.com/DeepanshuDipxsy">Twitter Here</a>
+        
     </body>
-    </html>
-{% endblock content %}
-    
-    
+</html>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
